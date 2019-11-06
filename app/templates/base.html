@@ -1,0 +1,37 @@
+<html>
+    <head>
+        {% if title %}
+	<title>{{ title }}</title>
+	{% else %}
+	<title>Login Form</title>
+	{% endif %}
+	<style>
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	.login-form {
+	    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+	    -webkit-box-shadow: 3px 3px 5px 6px#ccc;
+	    box-shadow:         3px 3px 5px 6px #ccc;
+
+	    border-radius: 25px;
+	}
+	.input-box {
+	    padding: 5px;
+	    font-family: 'Roboto', sans-serif;
+	}
+	.submit-button {
+	    padding: 10px 24px;
+	    background-color: #4CAF50; /* Green */
+	    color: white;
+	    text-align: center;
+	}
+	</style>
+    <head>
+    <body style="text-align: center">
+        <div>Login Form::base.html</div>
+	<br><br><br>
+	<div>
+	{% block content %}{% endblock %}
+	</div>
+    </body>
+</html>
+
