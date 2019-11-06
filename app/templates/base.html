@@ -7,16 +7,35 @@
 	{% endif %}
 	<style>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	* {
+	    font-family: 'Roboto', sans-serif;
+	}
+	h1, h2, h3, h4, h5, h6 {
+	    position: relative;
+	    margin-top: 1rem;
+	    margin-bottom: 1rem;
+	    font-weight: bold;
+	    line-height: 1.4;
+	    cursor: text;
+	}
+	div {
+	    display: block;
+	    font-family: 'Roboto', sans-serif;
+	}
+	form {
+	    margin-top: 10%;
+	    width: 33%;
+	    height: 33%;
+	}
 	.login-form {
-	    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-	    -webkit-box-shadow: 3px 3px 5px 6px#ccc;
-	    box-shadow:         3px 3px 5px 6px #ccc;
-
-	    border-radius: 25px;
+	    -moz-box-shadow:    3px 3px 5px 6px #eee;
+	    -webkit-box-shadow: 3px 3px 5px 6px #eee;
+	    box-shadow:         3px 3px 5px 6px #eee;
+	
+	    border-radius: 10px;
 	}
 	.input-box {
 	    padding: 5px;
-	    font-family: 'Roboto', sans-serif;
 	}
 	.submit-button {
 	    padding: 10px 24px;
@@ -24,14 +43,50 @@
 	    color: white;
 	    text-align: center;
 	}
+	.nav {
+	    width: 100vw;
+            position: fixed;
+	    height: 60px;
+	    top: 0;
+	    left: 0;
+	    background: #EEEEEE;
+            display: flex;
+	    align-items: center;
+	    justify-content: space-between;
+	    box-shadow: 0 0 5px 0 #555;
+	}
+	.nav-title {
+	    font-size: 30px;
+	    font-weight: bold;
+	    margin-left: 10%;
+	    padding: 8px 12px;
+	}
+	.nav-group {
+	    display: flex;
+            margin-right: 10%;
+	}
+	.nav-item {
+	    display: inline-block;
+	    padding: 8px 12px;
+	    font-family: 'Roboto', sans-serif;
+	    font-weight: bold;
+	    color: #888;
+	}
+	.content {
+	    padding-top: 60px;
+	    position: relative;
+	}
 	</style>
     <head>
     <body style="text-align: center">
-        <div>Login Form::base.html</div>
-	<br><br><br>
-	<div>
-	{% block content %}{% endblock %}
+	<div class="nav">
+	    <div class="nav-title">Flask Forms</div>
+	    <div class="nav-group">
+	        <div class="nav-item">Log In</div>
+		<div class="nav-item">Sign Up</div>
+	    </div>
 	</div>
+	{% block content %}{% endblock %}
     </body>
 </html>
 
